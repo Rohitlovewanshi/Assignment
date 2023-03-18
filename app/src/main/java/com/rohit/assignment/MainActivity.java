@@ -17,14 +17,14 @@ import com.rohit.assignment.adapters.SocialMediaItemAdapter;
 import com.rohit.assignment.models.ApiResponse;
 import com.rohit.assignment.models.FeedItem;
 import com.rohit.assignment.models.SocialMediaItem;
-import com.rohit.assignment.viewmodels.CarSearchViewModel;
+import com.rohit.assignment.viewmodels.MainActivityViewModel;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    private CarSearchViewModel viewModel ;
+    private MainActivityViewModel viewModel ;
 
     private ImageView carImage;
     private TextView carName, carRegNo, carType;
@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
         offerItemAdapter = new OfferItemAdapter(this);
         offerRecycler.setAdapter(offerItemAdapter);
 
-        viewModel = new ViewModelProvider(this).get(CarSearchViewModel.class);
+        viewModel = new ViewModelProvider(this).get(MainActivityViewModel.class);
         viewModel.init();
         viewModel.getApiResponseLiveData().observe(this, new Observer<ApiResponse>() {
             @Override
