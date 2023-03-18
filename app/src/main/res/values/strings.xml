@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Assignment</string>
+    <string name="car_image_desc">car_icon</string>
+    <string name="social_media_txt">Social Media</string>
+    <string name="offers_txt">Offers</string>
+    <string name="offer_image_desc">offer_image</string>
+    <string name="icon_desc">Icon</string>
+</resources>
