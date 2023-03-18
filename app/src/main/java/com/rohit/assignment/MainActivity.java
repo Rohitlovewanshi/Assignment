@@ -61,7 +61,6 @@ public class MainActivity extends AppCompatActivity {
         offerRecycler.setAdapter(offerItemAdapter);
 
         viewModel = new ViewModelProvider(this).get(MainActivityViewModel.class);
-        viewModel.init();
         viewModel.getApiResponseLiveData().observe(this, new Observer<ApiResponse>() {
             @Override
             public void onChanged(ApiResponse apiResponse) {

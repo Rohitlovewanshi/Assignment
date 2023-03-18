@@ -15,7 +15,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class CarRepository {
+public class ApiRepository {
 
     private MutableLiveData<ApiResponse> apiResponseLiveData;
 
@@ -24,11 +24,11 @@ public class CarRepository {
     @Inject
     RetroServiceInterface mService;
 
-    public CarRepository(Context context) {
+    public ApiRepository(Context context) {
         this.context = context;
         apiResponseLiveData = new MutableLiveData<>();
 
-        ((MyApplication) context).getRetroComponent().inject(CarRepository.this);
+        ((MyApplication) context).getRetroComponent().inject(ApiRepository.this);
 
     }
 
