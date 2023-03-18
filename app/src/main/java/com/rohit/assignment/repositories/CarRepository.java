@@ -6,6 +6,8 @@ import androidx.lifecycle.MutableLiveData;
 import com.rohit.assignment.models.ApiResponse;
 import com.rohit.assignment.apis.CarSearchService;
 
+import javax.inject.Singleton;
+
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Call;
@@ -14,6 +16,7 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
+@Singleton
 public class CarRepository {
 
     private static final String CAR_SEARCH_SERVICE_BASE_URL = "https://mocki.io/";
